@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "fsharpperformance", "fsharpperformance\fsharpperformance.fsproj", "{2B0190C6-B765-4F9A-A1AB-B1CDFB0520A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B0190C6-B765-4F9A-A1AB-B1CDFB0520A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0190C6-B765-4F9A-A1AB-B1CDFB0520A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0190C6-B765-4F9A-A1AB-B1CDFB0520A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0190C6-B765-4F9A-A1AB-B1CDFB0520A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E39B25BB-35F5-4626-ABFB-DD5436203BDA}
+	EndGlobalSection
+EndGlobal
