@@ -34,6 +34,7 @@ let rec sumOfSquares2(n :int64) =
         size <- (size + uint64(square n))
         sumOfSquares2 (n - 1L)
 
+//Sums squares using for loop
 let sumOfSquaresLoop(n) =
     let mutable x = 0L
     let mutable sum = 0UL
