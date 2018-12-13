@@ -12,7 +12,7 @@ let main argv =
     printfn ""
     while true do 
         printfn "Enter a number to calculate sum of squares"
-        let number = Console.ReadLine() |> int64
+        let number = Console.ReadLine() |> int
         printfn "Enter how many times to run it"
         let times = Console.ReadLine() |> int
         printfn "Enter logic type"
