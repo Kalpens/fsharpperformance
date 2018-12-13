@@ -19,8 +19,6 @@ let main argv =
         let recursion = Console.ReadLine() |> int
         let finalValue = startCalculation(number, times, recursion)
         printfn "Value: %O" finalValue 
-        let time = averageTime(-1)
-        if (time = -1)then
-            printf"Something went wrong calculating average time"
+        averageTime() |> ignore
 
     0 // return an integer exit code
