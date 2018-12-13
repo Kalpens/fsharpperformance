@@ -34,6 +34,13 @@ let rec sumOfSquares2(n :int64) =
         size <- (size + uint64(square n))
         sumOfSquares2 (n - 1L)
 
+let sumOfSquaresLoop(n) =
+    let mutable x = 0L
+    let mutable sum = 0UL
+    for x=1 to n do
+        sum <- sum + uint64(x * x)
+    sum
+
 //Runs logic x times in recursion
 let rec startCalculation(value, times, recursion) =
     msList <- []
@@ -47,6 +54,8 @@ let rec startCalculation(value, times, recursion) =
                 else if(recursion = 2)then
                     sumOfSquares2(value)
                     size
+                else if(recursion = 3)then
+                    sumOfSquaresLoop(int(value))
                 else
                     sumOfSquares(value)
            let ms = int(stopWatch.ElapsedMilliseconds)
