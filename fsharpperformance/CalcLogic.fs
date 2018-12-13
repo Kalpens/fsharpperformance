@@ -69,8 +69,8 @@ let startCalculation(value, times, recursion) =
 
 //Calculates average time
 let averageTime() = 
-    let mutable averageMs = 0 :int
-    List.iter( fun ms -> averageMs <- (averageMs + ms / msList.Length) )msList
-    printfn "Average elapsed time in ms: %i" averageMs
+    let mutable averageMs = 0.0 :float
+    List.iter( fun ms -> averageMs <- (averageMs + float(ms) / float(msList.Length)) )msList
+    printfn "Average elapsed time in ms: %f" averageMs
     averageMs
 
