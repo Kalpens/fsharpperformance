@@ -45,8 +45,8 @@ let sumOfSquaresLoop(n) =
         sum <- sum + uint64(square(int64(x)))
     sum
 
-//Runs logic x times in recursion
-let rec startCalculation(value, times, recursion) =
+//Runs logic x times
+let startCalculation(value, times, recursion) =
     msList <- []
     let rec calculation(value, times, recursion, finalValue) = 
         if not (times = 0)then
