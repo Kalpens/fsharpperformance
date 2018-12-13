@@ -39,7 +39,7 @@ let sumOfSquaresLoop(n) =
     let mutable x = 0L
     let mutable sum = 0UL
     for x=1 to n do
-        sum <- sum + uint64(x * x)
+        sum <- sum + uint64(square(int64(x)))
     sum
 
 //Runs logic x times in recursion
