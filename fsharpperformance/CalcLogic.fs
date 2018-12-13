@@ -2,7 +2,6 @@
 open System
 open System.Diagnostics
 
-let mutable size = 0UL :UInt64
 let mutable msList = []
 
 //Stopwatches
@@ -29,10 +28,14 @@ let sumOfSquaresTailRecursive(n :int64) =
     calcSum(n, 0UL)
 
  //Sums squares in recursion by storing values in mutable variable
-let rec sumOfSquares2(n :int64) =
-    if not (n = 0L) then
-        size <- (size + uint64(square n))
-        sumOfSquares2 (n - 1L)
+let sumOfSquares2(n :int64) =
+    let mutable size = 0UL :UInt64
+    let rec sumSquaresOptimized(n) =
+        if not (n = 0L) then
+            size <- (size + uint64(square n))
+            sumSquaresOptimized (n - 1L)
+    sumSquaresOptimized n
+    size
 
 //Sums squares using for loop
 let sumOfSquaresLoop(n) =
@@ -47,14 +50,12 @@ let rec startCalculation(value, times, recursion) =
     msList <- []
     let rec calculation(value, times, recursion, finalValue) = 
         if not (times = 0)then
-           size <- 0UL 
            ResetStopWatch()
            let result = 
                 if(recursion = 1)then
                     sumOfSquaresTailRecursive(value)
                 else if(recursion = 2)then
                     sumOfSquares2(value)
-                    size
                 else if(recursion = 3)then
                     sumOfSquaresLoop(int(value))
                 else
