@@ -36,7 +36,6 @@ let sumOfSquares2(n) =
 
 //Sums squares using for loop
 let sumOfSquaresLoop(n) =
-    let mutable x = 0
     let mutable sum = 0UL
     for x=1 to n do
         sum <- sum + uint64(x * x)
