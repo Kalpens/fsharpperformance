@@ -2,7 +2,7 @@
 open System
 open System.Diagnostics
 
-let mutable msList = []
+let mutable msList = [] :List<int>
 
 //Stopwatches
 let stopWatch = new Stopwatch() 
@@ -59,7 +59,7 @@ let startCalculation(value, times, recursion) =
                     sumOfSquares(value)
            let ms = int(stopWatch.ElapsedMilliseconds)
            msList <- List.append msList [ms]
-           calculation(value, (times - 1), recursion, (finalValue + result))
+           calculation(value, (times - 1), recursion, result)
         else
             finalValue
     calculation(value, times, recursion, 0UL)
